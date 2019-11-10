@@ -1,0 +1,7 @@
+# From https://github.com/kylemanna/docker-aosp/blob/master/gitconfig
+# Provide a default gitconfig to bypass repo init prompts for identity
+[color]
+	ui = auto
+[user]
+	name = Docker AOSP
+	email = aosp@aosp.docker.local
