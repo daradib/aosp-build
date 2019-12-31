@@ -37,7 +37,7 @@ RUN apt-get update \
 
 # Debian packages repo, but instead we download the latest version.
 ADD https://storage.googleapis.com/git-repo-downloads/repo /usr/local/bin/repo
-RUN echo "d06f33115aea44e583c8669375b35aad397176a411de3461897444d247b6c220  /usr/local/bin/repo" \
+RUN echo "0cf5f52bcafb8e1d3ba0271b087312f6117b824af272bedd4ee969d52363a86b  /usr/local/bin/repo" \
   | sha256sum --strict -c - \
   && chmod 755 /usr/local/bin/repo
 
