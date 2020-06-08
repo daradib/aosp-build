@@ -12,11 +12,11 @@ FROM debian:buster-slim
 # Changes:
 #  * added argument --no-install-recommends
 #  * added additional dependencies
-#    - repo: ca-certificates less python
+#    - repo: ca-certificates less python3
 #    - kernel build system: bc libssl-dev
 #    - build environment: procps
 #    - build makefile: rsync
-#    - android-prepare-vendor: python-protobuf wget
+#    - android-prepare-vendor: python python-protobuf wget
 #    - prebuilt clang: libncurses5
 #    - prebuilt jdk: fontconfig
 #    - art-apex-tester: python3
@@ -37,7 +37,7 @@ RUN apt-get update \
 
 # Debian packages repo, but instead we download the latest version.
 ADD https://storage.googleapis.com/git-repo-downloads/repo /usr/local/bin/repo
-RUN echo "0cf5f52bcafb8e1d3ba0271b087312f6117b824af272bedd4ee969d52363a86b  /usr/local/bin/repo" \
+RUN echo "d73f3885d717c1dc89eba0563433cec787486a0089b9b04b4e8c56e7c07c7610  /usr/local/bin/repo" \
   | sha256sum --strict -c - \
   && chmod 755 /usr/local/bin/repo
 
